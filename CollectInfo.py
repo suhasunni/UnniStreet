@@ -42,7 +42,11 @@ class Collect:
 
         return average_score / len(self.__posts)
 
-       
+    def enhance_sentiment(self):
+        #Add/Subtract sentiment score based on hard-coded key words
+        #Implement weightage of upvotes/downvotes
+        #hello
+        pass   
          
         
            
