@@ -1,14 +1,21 @@
 import praw
 import re
 from Sentiment import SentimentAnalysis
+import os
 
 class Stock:
     def __init__(self, stock_name):
         
         self.stock_name = stock_name
         
+        id = os.environ.get('CLIENT_ID')
+        secret = os.environ.get('CLIENT_SECRET')
+        username = os.environ.get('REDDIT_USERNAME')
+        password = os.environ.get('PASSWORD')
+        
+        
         #create instance of Reddit API
-        self.reddit_API = praw.Reddit(client_id = '7yoyn3NZ1TCchULU48S9Rw', client_secret = 'tjF-qp0YOwFBjTijj3tI9wl3H1uvQA', username = 'WSB_Developer', password = 'ComputerScience', user_agent = 'none')
+        self.reddit_API = praw.Reddit(client_id = id, client_secret = secret, username = username, password = password, user_agent = 'none')
         
         #create instance of r/wallstreetbets subreddit
         self.wall_street_bets = self.reddit_API.subreddit('wallstreetbets') 
