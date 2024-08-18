@@ -76,7 +76,7 @@ class Screen:
             reccomendation = f'Buy, buy, buy! {stock_name} has an extremly high sentiment!'
         
         elif sentiment_score[0] < 0:
-            reccomendation = f'Oh no! Looks like you should stay away from {stock_name} right now!\nMayhaps consider shorting!'
+            reccomendation = f'Oh no! Looks like you should stay away from {stock_name} right now!\nMayhaps consider puts!'
         
         #Display reccomendation
         self.reccomendation_lb.config(text=reccomendation)   

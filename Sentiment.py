@@ -25,15 +25,15 @@ class SentimentAnalysis:
         x_train, x_test, y_train, y_test = train_test_split(x,y,test_size = 0.2, random_state = 42)
 
         #create instance of naive bayes model
-        jane_streets_secret = MultinomialNB()
+        unni_streets_secret = MultinomialNB()
         #train model
-        jane_streets_secret.fit(x_train,y_train)
+        unni_streets_secret.fit(x_train,y_train)
 
         #Commented line below tests accuracy of model with 20% of training data
-        #print(roc_auc_score(y_test,jane_streets_secret.predict_proba(x_test), multi_class='ovo'))
+        #print(roc_auc_score(y_test,unni_streets_secret.predict_proba(x_test), multi_class='ovo'))
         
         #Return model
-        return jane_streets_secret
+        return unni_streets_secret
     
     #Returns sentiment value of inputted text
     def get_sentiment(self,text): 

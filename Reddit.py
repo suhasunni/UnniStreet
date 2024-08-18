@@ -8,6 +8,7 @@ class Stock:
         
         self.stock_name = stock_name
         
+        #API Keys
         id = os.environ.get('CLIENT_ID')
         secret = os.environ.get('CLIENT_SECRET')
         username = os.environ.get('REDDIT_USERNAME')
